@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Vazirmatn:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Vazirmatn", ui-sans-serif, system-ui, sans-serif;
+  --color-bg-editor: #0c0c0e;
+  --color-bg-workspace: #080809;
+  --color-border-subtle: #1a1a1a;
+}
+
+@layer base {
+  body {
+    @apply bg-[#0c0c0e] text-[#e4e4e7] antialiased;
+  }
+}
+
+.editor-grid {
+  background-image: radial-gradient(#1a1a1a 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.cropper-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background: #000;
+}
+
+/* Custom range input styling */
+input[type='range'] {
+  @apply h-1.5 bg-zinc-800 rounded-lg appearance-none cursor-pointer;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  @apply appearance-none w-4 h-4 bg-white rounded-full border-none shadow-lg transition-transform hover:scale-125;
+}
